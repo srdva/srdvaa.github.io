@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ardonoo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Maafff yaaaaa</h1>
+        <p>coba aja pencet ga kalo bisa, hehehehehehe</p>
+        <div class="buttons">
+            <button id="yesBtn">Iyaaa</button>
+            <button id="noBtn">Gak!</button>
+        </div>
+        <img id="yesImage" src="https://tse4.mm.bing.net/th?id=OIP.BvhS-TN91nMCIMTPiT9QNQHaHH&pid=Api&P=0&h=220" alt="" class="hidden">
+    </div>
+    <script>
+        const yesBtn = document.getElementById("yesBtn");
+        const noBtn = document.getElementById("noBtn");
+        const yesImage = document.getElementById("yesImage");
+
+        // Event listener untuk tombol "Iya"
+        yesBtn.addEventListener("click", () => {
+            yesImage.classList.remove("hidden");
+        });
+
+        // Event listener untuk tombol "Gak"
+        noBtn.addEventListener("mouseover", () => {
+            const randomX = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            noBtn.style.position = "absolute";
+            noBtn.style.left = `${randomX}px`;
+            noBtn.style.top = `${randomY}px`;
+        });
+    </script>
+</body>
+</html>
